@@ -1,0 +1,123 @@
+[
+  {
+    "ContainingType": "ACCMS_AGH.Controllers.AccmsController",
+    "Method": "ChequeAllotment",
+    "RelativePath": "api/Accms/cheque-allotment",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pPrint",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ACCMS_AGH.Controllers.ApiAccmsController",
+    "Method": "ChequeList",
+    "RelativePath": "api/ApiAccms/chequelist",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "groupCode",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ACCMS_AGH.Controllers.ApiAccmsController",
+    "Method": "GetChequeRegisterPrintReport",
+    "RelativePath": "api/ApiAccms/chequeregister",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "where",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "cp_ChequeNo",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[ACCMS_AGH.Models.Accms.ChequePrintDetails, ACCMS_AGH, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ACCMS_AGH.Controllers.ApiAccmsController",
+    "Method": "Index",
+    "RelativePath": "api/ApiAccms/index",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ACCMS_AGH.Controllers.ApiAccmsController",
+    "Method": "LedgerList",
+    "RelativePath": "api/ApiAccms/ledgerlist",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "groupCode",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ACCMS_AGH.Controllers.ApiAccmsController",
+    "Method": "GetListTable",
+    "RelativePath": "api/ApiAccms/listtable",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pPrint",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ACCMS_AGH.Controllers.ApiAccmsController",
+    "Method": "SaveChequeAllotment",
+    "RelativePath": "api/ApiAccms/savechequeallotment",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "ACCMS_AGH.Models.Accms.ChequeAllotmentRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

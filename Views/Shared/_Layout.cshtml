@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ACCMS_AGH</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ACCMS_AGH.styles.css" asp-append-version="true" />
+</head>
+<body style="background-color: #f8f9fa; font-family: 'Segoe UI', sans-serif;">
+
+    <div class="d-flex" style="min-height: 100vh;">
+        <!-- Sidebar -->
+        <nav class="navbar navbar-expand-sm bg-white border-end shadow-sm flex-column p-4"
+             style="width: 400px; background-color: #ffffff; border-radius: 0 8px 8px 0;">
+            <a class="navbar-brand mb-4 fw-bold text-primary"
+               asp-area="" asp-controller="Home" asp-action="Index"
+               style="font-size: 1.5rem;">ACCMS_AGH</a>
+            <ul class="navbar-nav flex-column w-100">
+                <li class="nav-item mb-2">
+                    <a class="nav-link text-dark px-3 py-2 rounded"
+                       asp-area="" asp-controller="Home" asp-action="Index"
+                       style="transition: all 0.2s; background-color: #e9ecef;">🏠 Home</a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link text-dark px-3 py-2 rounded"
+                       asp-area="" asp-controller="Home" asp-action="Privacy"
+                       style="transition: all 0.2s;">🔒 Privacy</a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link text-dark px-3 py-2 rounded"
+                       asp-area="" asp-controller="Emp" asp-action="Index"
+                       style="transition: all 0.2s;">👨‍💼 Employee List</a>
+                </li>
+                <li class="nav-item mb-2">
+                    <a class="nav-link text-dark px-3 py-2 rounded"
+                       asp-area="" asp-controller="Accms" asp-action="ChequeAllotment"
+                       style="transition: all 0.2s;">💳 Cheque Allotment</a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main content -->
+        <div class="flex-grow-1 p-4" style="background-color: #f1f3f5;">
+            <main role="main" class="pb-3">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="border-top text-muted" style="background-color: #ffffff; padding: 1rem 0; text-align: center;">
+        <div class="container">
+            &copy; 2025 - <span class="text-primary">ACCMS_AGH</span> -
+            <a asp-area="" asp-controller="Home" asp-action="Privacy" style="text-decoration: none;">Privacy</a>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>
